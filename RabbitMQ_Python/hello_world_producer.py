@@ -1,4 +1,5 @@
-import pika, sys
+import pika
+import sys
 
 # build connection to server
 credentials = pika.PlainCredentials("guest", "guest")
@@ -9,9 +10,9 @@ conn_broker = pika.BlockingConnection(conn_params)
 channel = conn_broker.channel()
 
 channel.exchange_declare(exchange="hello-exchange",
-                         type="direct",
-                         passive="False",
-                         durable="True",
+                         exchange_type="direct",
+                         passive=False,
+                         durable=True,
                          auto_delete=False)
 # create text message
 msg = sys.argv[1]
