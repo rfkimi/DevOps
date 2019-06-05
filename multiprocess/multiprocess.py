@@ -14,11 +14,11 @@ def info(title):
 
 def f(name):
     info('\033[31;1m called from child process function f \033[0m')  # 打印f函数的父子进程
-    print'hello ' + name
+    print('hello ' + name)
 
 
 def run(name):
-    print name + ' ' + 'process create!'
+    print(name + ' ' + 'process create!')
 
 
 if __name__ == '__main__':
