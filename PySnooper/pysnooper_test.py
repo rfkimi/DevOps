@@ -30,4 +30,6 @@ def foo():
         mid = (lower + upper) / 2
         print(lower, upper, mid)
 
+
 foo()
+
